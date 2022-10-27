@@ -1,16 +1,15 @@
 <script setup>
-import NavItem from "./NavItem.vue";
+import NavItem from "../../nav/NavItem.vue";
 </script>
 
 <template>
   <div class="hidden xl:block text-white tracking-wide uppercase">
     <nav class="flex items-center py-2">
-      <NavItem name="Home" path="home"></NavItem>
-      <NavItem name="Service" path="service"></NavItem>
-      <NavItem name="Project" path="project"></NavItem>
-      <NavItem name="Blog" path="blog"></NavItem>
-      <NavItem name="Chat Bot" path="chat"></NavItem>
-      <NavItem name="FAQ" path="faq"></NavItem>
+      <NavItem name="home" path="home" />
+      <NavItem name="service" path="service" />
+      <NavItem name="project" path="project" />
+      <NavItem name="contact" path="contact" />
+      <NavItem name="faq" path="faq" />
     </nav>
   </div>
 </template>

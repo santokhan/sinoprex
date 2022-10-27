@@ -5,7 +5,7 @@ import FeatureDes from "./FeatureDes.vue";
 </script>
 <template>
   <div
-    class="max-w-7xl mx-auto lg:flex items-center py-[5rem] text-stone-900 px-4"
+    class="max-w-7xl mx-auto lg:flex items-center py-[3rem] xl:py-[5rem] text-stone-900 px-4"
   >
     <div class="w-full xl:w-1/2 py-8">
       <div class="flex flex-col items-center px-12">
@@ -30,33 +30,37 @@ import FeatureDes from "./FeatureDes.vue";
           text="We provide marketing services to startups and small businesses to looking for a partner of their digital media, design & development, lead generation and communications requirents."
         />
       </div>
-      <div class="flex gap-[2rem] text-center" role="card">
-        <div class="w-full xl:w-1/2 flex flex-col gap-3">
-          <div class="flex justify-center">
-            <img
-              class="h-20"
-              src="../../../assets/feature/pie.svg"
-              alt="saas"
-            />
-          </div>
-          <div class="text-xl font-semibold">Reporting & Analysis</div>
-          <div class="font-semibold text-stone-500 text-justify">
-            We provide marketing service to startups businesses to looking for a
-            partner digital media.
+      <div class="flex flex-wrap text-center" role="card">
+        <div class="w-full xl:w-1/2 py-4 px-4">
+          <div class="flex flex-col gap-3">
+            <div class="flex justify-center">
+              <img
+                class="h-20"
+                src="../../../assets/feature/pie.svg"
+                alt="saas"
+              />
+            </div>
+            <div class="text-xl font-semibold">Reporting & Analysis</div>
+            <div class="font-semibold text-stone-500 text-justify">
+              We provide marketing service to startups businesses to looking for
+              a partner digital media.
+            </div>
           </div>
         </div>
-        <div class="w-full xl:w-1/2 flex flex-col gap-3">
-          <div class="flex justify-center">
-            <img
-              class="h-20"
-              src="../../../assets/feature/android.svg"
-              alt="data"
-            />
-          </div>
-          <div class="text-xl font-semibold">Web APP</div>
-          <div class="font-semibold text-stone-500 text-justify">
-            Using the most popular framework to make your next web application.
-            You can use it on multiple devices
+        <div class="w-full xl:w-1/2 py-4 px-4">
+          <div class="flex flex-col gap-3">
+            <div class="flex justify-center">
+              <img
+                class="h-20"
+                src="../../../assets/feature/android.svg"
+                alt="data"
+              />
+            </div>
+            <div class="text-xl font-semibold">Web APP</div>
+            <div class="font-semibold text-stone-500 text-justify">
+              Using the most popular framework to make your next web
+              application. You can use it on multiple devices
+            </div>
           </div>
         </div>
       </div>

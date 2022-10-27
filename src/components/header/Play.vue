@@ -7,8 +7,9 @@ export default {
 };
 </script>
 <template>
+  <!-- top-[36vh] lg:top-[40vh] xl:top-[44vh] -->
   <div
-    class="hidden xl:block absolute h-20 xl:h-40 w-20 xl:w-40 xl:right-[19.5vw] top-[36vh] lg:top-[40vh] xl:top-[44vh] play-btn"
+    class="hidden xl:block absolute h-20 xl:h-40 w-20 xl:w-40 xl:right-[19.5vw] play-btn"
     @click="playVideo()"
   >
     <img class="w-full" :src="play" alt="play" />

@@ -4,16 +4,16 @@
   >
     <div class="max-w-2xl flex flex-col gap-[32px]">
       <div
-        class="font-[600] text-[3rem] xl:text-[4.5rem] leading-[4rem] xl:leading-[80px] text-white"
+        class="font-[600] text-[3rem] xl:text-[4.5rem] leading-[4rem] xl:leading-[80px] text-sky-400"
       >
         Drive More Customers Through Digitalization.
       </div>
-      <div class="max-w-2xl py-2 pr-8">
+      <div class="max-w-2xl py-2 pr-8 text-sky-100">
         We provide data analysis, cloud service, mobile development, SAAS
         service for your business. If you want make a online store or need
         mobile APPs for your customer you have come to the right place.
       </div>
-      <div class="">
+      <div class="text-sky-100">
         <div class="py-1">
           <i class="fas fa-check text-sky-400" aria-hidden="true"></i>
           <span class="px-2">Over 100+ payments getway support</span>

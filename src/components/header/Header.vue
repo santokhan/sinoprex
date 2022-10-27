@@ -33,7 +33,7 @@ export default {
 };
 </script>
 <template>
-  <header class="bg-[rgba(0, 0, 0, 0.4)] relative w-full">
+  <header class="bg-[rgba(0, 0, 0, 0.4)] relative w-full" id="headerMain">
     <BackgroundImage :background="background"></BackgroundImage>
     <video class="absolute left-0 top-0 w-full" controls id="backgroundVideo">
       <source src="../../assets/reel.mp4" />

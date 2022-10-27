@@ -1,5 +1,5 @@
 <script setup>
-import DropdownItem from "./DropdownItem.vue";
+import NavItem from "../../../nav/NavItem.vue";
 </script>
 
 <template>
@@ -7,12 +7,11 @@ import DropdownItem from "./DropdownItem.vue";
     class="absolute right-0 top-20 border border-stone-900 bg-stone-800 w-48 text-white tracking-wide uppercase rounded-2xl py-4 dropdown-menu-1"
   >
     <nav class="flex flex-col items-center gap-3 py-2">
-      <DropdownItem name="Home" path="home"></DropdownItem>
-      <DropdownItem name="Service" path="service"></DropdownItem>
-      <DropdownItem name="Project" path="project"></DropdownItem>
-      <DropdownItem name="Blog" path="blog"></DropdownItem>
-      <DropdownItem name="Chat Bot" path="chat"></DropdownItem>
-      <DropdownItem name="FAQ" path="faq"></DropdownItem>
+      <NavItem name="Home" path="home" />
+      <NavItem name="Service" path="service" />
+      <NavItem name="project" path="project" />
+      <NavItem name="Contact" path="contact" />
+      <NavItem name="FAQ" path="faq" />
     </nav>
   </div>
 </template>
