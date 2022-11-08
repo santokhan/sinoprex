@@ -17,7 +17,7 @@ import FooterNavItem from "./FooterNavItem.vue";
             class="flex flex-col lg:flex-row font-medium gap-[32px] uppercase"
           >
             <FooterNavItem name="About Us" path="about" />
-            <FooterNavItem name="Services" path="service" />
+            <FooterNavItem name="Service" path="service" />
             <FooterNavItem name="Reviews" path="review" />
             <FooterNavItem name="Contact" path="contact" />
           </div>

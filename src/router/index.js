@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouterView } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
-import ServiceView from "../views/ServiceView.vue";
+import ServicesView from "../views/ServicesView.vue";
 import BlogView from "../views/BlogView.vue";
 import ProjectView from "../views/ProjectView.vue";
 import ChatView from "../views/ChatView.vue";
@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: "/service",
       name: "service",
-      component: ServiceView,
+      component: ServicesView,
     },
     {
       path: "/blog",

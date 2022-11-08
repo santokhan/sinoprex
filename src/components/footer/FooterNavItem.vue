@@ -5,10 +5,7 @@ export default {
 </script>
 <template>
   <div>
-    <a
-      class="border-b-2 border-transparent hover:border-blue-500"
-      href="{{path}}"
-    >
+    <a class="border-b-2 border-transparent hover:border-blue-500" :href="path">
       {{ name }}
     </a>
   </div>

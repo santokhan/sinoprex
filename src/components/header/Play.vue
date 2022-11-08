@@ -3,7 +3,7 @@ import play from "../../assets/play.svg";
 </script>
 <script>
 export default {
-  props: ["play", "playVideo"],
+  props: ["playVideo"],
 };
 </script>
 <template>

@@ -11,7 +11,7 @@ import { RouterLink } from "vue-router";
       <div class="flex flex-wrap px-2">
         <div class="w-full xl:w-1/3 my-8 px-2">
           <div class="flex flex-col items-center xl:items-start gap-3">
-            <RouterLink to="services">
+            <RouterLink to="service">
               <span
                 class="uppercase text-blue-500 bg-blue-200 px-4 py-1 font-semibold rounded-full text-sm"
               >

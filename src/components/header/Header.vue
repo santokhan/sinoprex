@@ -2,23 +2,24 @@
 import TopBar from "./TopBar.vue";
 import Social from "./Social.vue";
 import Banner from "./Banner.vue";
-// import reel from "../../assets/reel.mp4";
+import reel from "../../assets/reel.mp4";
 import BackgroundImage from "./BackgroundImage.vue";
 import Play from "./Play.vue";
-import Dropdown from "./nav/dropdown/Dropdown.vue";
+import PlayMobile from "./PlayMobile.vue";
+import VideoMobile from "./VideoMobile.vue";
 </script>
 <script>
 export default {
   data() {
     return {
       play: false,
+      playOnMobile: false,
       background: true,
     };
   },
   methods: {
     playVideo() {
       this.background = this.background ? false : true;
-
       const backgroundVideo = document.getElementById("backgroundVideo");
       if (this.play) {
         this.play = false;
@@ -29,20 +30,36 @@ export default {
       }
       console.log({ bg: this.background, p: this.play });
     },
+    playVideoMobile() {
+      if (this.playOnMobile === false) {
+        this.playOnMobile = true;
+        document.getElementById("backgroundVideoMobile").play();
+      } else {
+        this.playOnMobile = false;
+      }
+      console.log({ p: this.playOnMobile });
+    },
   },
+  components: { PlayMobile, VideoMobile },
 };
 </script>
 <template>
+  <VideoMobile v-if="playOnMobile"></VideoMobile>
   <header class="bg-[rgba(0, 0, 0, 0.4)] relative w-full" id="headerMain">
-    <BackgroundImage :background="background"></BackgroundImage>
-    <video class="absolute left-0 top-0 w-full" controls id="backgroundVideo">
+    <BackgroundImage :background="background" />
+    <video
+      class="absolute left-0 top-0 w-full"
+      controls
+      id="backgroundVideo"
+      @play="play"
+    >
       <source src="../../assets/reel.mp4" />
       Error Message
     </video>
-    <Play :playVideo="playVideo" :play="play"></Play>
-    <TopBar></TopBar>
-    <Banner></Banner>
-    <Social></Social>
+    <Play :playVideo="playVideo" :play="play" />
+    <TopBar />
+    <Banner :playOnMobile="playOnMobile" :playVideoMobile="playVideoMobile" />
+    <Social />
   </header>
 </template>
 

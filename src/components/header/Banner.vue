@@ -1,8 +1,17 @@
+<script setup>
+import PlayMobile from "./PlayMobile.vue";
+</script>
+<script>
+export default { props: ["playVideoMobile"] };
+</script>
 <template>
   <div
     class="max-w-7xl mx-auto px-4 py-[80px] md:py-[80px] lg:py-[100px] xl:py-[120px] xl:text-xl text-gray-200 banner"
   >
     <div class="max-w-2xl flex flex-col gap-[32px]">
+      <div class="flex justify-center">
+        <PlayMobile :playVideoMobile="playVideoMobile"></PlayMobile>
+      </div>
       <div
         class="font-[600] text-[3rem] xl:text-[4.5rem] leading-[4rem] xl:leading-[80px] text-sky-400"
       >

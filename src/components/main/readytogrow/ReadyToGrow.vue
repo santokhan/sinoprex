@@ -18,7 +18,7 @@ import user from "../../../assets/readytogrow/user.svg";
     <div class="max-w-7xl mx-auto flex flex-col gap-[5rem]">
       <div class="px-2 text-center max-w-4xl mx-auto">
         <div class="flex flex-col gap-3">
-          <RouterLink to="services">
+          <RouterLink to="service">
             <span
               class="uppercase text-blue-500 bg-blue-200 px-4 py-1 font-semibold rounded-full text-sm"
             >
