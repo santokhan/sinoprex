@@ -58,7 +58,6 @@ import FooterNavItem from "./FooterNavItem.vue";
         <Social />
       </div>
     </div>
-
     <Copyright />
   </footer>
 </template>

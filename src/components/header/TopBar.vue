@@ -39,7 +39,6 @@ export default {
     </div>
   </div>
 </template>
-
 <style>
 .logo {
   font-family: "Poppins", sans-serif;

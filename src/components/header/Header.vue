@@ -62,7 +62,6 @@ export default {
     <Social />
   </header>
 </template>
-
 <style scoped>
 .bg-header {
   background-image: url("../../assets/bg-header-2.png");
