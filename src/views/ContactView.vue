@@ -3,9 +3,24 @@ import Header from "../components/header/Header.vue";
 import Footer from "../components/footer/Footer.vue";
 import TopBar from "../components/header/topbar/TopBar.vue";
 </script>
+<script>
+export default {
+  data() {
+    return { submit: false, ok: false };
+  },
+  methods: {
+    handleSubmit() {
+      this.submit = this.submit ? false : true;
+    },
+    handleOk() {
+      this.ok = this.ok ? false : true;
+    },
+  },
+};
+</script>
 <template>
   <TopBar />
-  <div class="flex flex-col gap-[5rem] items-center">
+  <div class="flex flex-col items-center">
     <iframe
       width="100%"
       height="350"
@@ -17,7 +32,9 @@ import TopBar from "../components/header/topbar/TopBar.vue";
       marginwidth="0"
     >
     </iframe>
-    <div class="flex flex-col gap-3 items-center max-w-4xl mx-auto text-center">
+    <div
+      class="flex flex-col gap-3 items-center max-w-4xl mx-auto text-center py-[5rem]"
+    >
       <div class="font-semibold text-3xl xl:text-4xl uppercase text-stone-900">
         Get in touch with us & send us message today!
       </div>
@@ -38,9 +55,41 @@ import TopBar from "../components/header/topbar/TopBar.vue";
     </div>
   </div>
 
-  <div class="pb-[8rem]">
+  <div
+    class="pb-[5rem] flex justify-center"
+    v-if="submit === true && ok === false"
+  >
     <div
-      class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-[5rem] mx-auto bg-blue-100 text-gray-900 rounded-lg shadow-lg"
+      class="bg-blue-100 rounded-xl flex flex-col items-center px-10 py-8 gap-4"
+    >
+      <div
+        class="bg-indigo-500 flex justify-center items-center rounded-full h-12 w-12 xl:h-20 xl:w-20 mb-4"
+      >
+        <i
+          class="fa fa-check text-2xl xl:text-4xl text-white"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <div class="text-3xl font-semibold">Thank You</div>
+      <div class="text-gray-600 font-semibold text-xl mb-2">
+        Your details has been successfully submitted. Thanks!
+      </div>
+      <button
+        class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+        @click="handleOk()"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+
+  <form
+    class="pb-[8rem]"
+    @submit.prevent="handleSubmit()"
+    v-if="submit === false"
+  >
+    <div
+      class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-[5rem] mx-auto bg-blue-100 text-gray-900 rounded-lg shadow-lg"
     >
       <div class="flex flex-col justify-between">
         <div>
@@ -63,14 +112,13 @@ import TopBar from "../components/header/topbar/TopBar.vue";
           <input
             class="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder=""
           />
         </div>
         <div class="mt-8">
           <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
           <input
             class="w-full bg-white text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text"
+            type="email"
           />
         </div>
         <div class="mt-8">
@@ -88,7 +136,7 @@ import TopBar from "../components/header/topbar/TopBar.vue";
         </div>
       </div>
     </div>
-  </div>
-
+  </form>
+  <div></div>
   <Footer></Footer>
 </template>

@@ -23,7 +23,7 @@ export default {
     >
       <input
         class="bg-transparent text-white w-full py-2 outline-none border-none"
-        type="text"
+        type="email"
         placeholder="Enter Your Email Address"
         pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
         required
