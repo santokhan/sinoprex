@@ -4,6 +4,15 @@ import play from "../../assets/play.svg";
 <script>
 export default {
   props: ["playVideo"],
+  methods: {
+    playPosition() {
+      let position = document.querySelector("#headerMain").clientHeight / 2;
+      console.log(`top-[${position}px]`);
+      const playBtn = document.querySelector(".play-btn");
+      let playHeight = playBtn.clientHeight / 2;
+      return "top" + `${position - playHeight}px`;
+    },
+  },
 };
 </script>
 <template>
@@ -34,21 +43,25 @@ export default {
 }
 @media (min-width: 1200px) {
   .play-btn {
+    top: 32vw;
     right: 6vw;
   }
 }
 @media (min-width: 1400px) {
   .play-btn {
+    top: 30vw;
     right: 10vw;
   }
 }
 @media (min-width: 1600px) {
   .play-btn {
+    top: 27vw;
     right: 16vw;
   }
 }
 @media (min-width: 1800px) {
   .play-btn {
+    top: 23vw;
     right: 19.5vw;
   }
 }

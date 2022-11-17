@@ -6,5 +6,5 @@ window.onload = () => {
     let playHeight = playBtn.clientHeight / 2;
     playBtn.style.top = `${position - playHeight}px`;
   }
-  playPosition();
+  // playPosition();
 };
