@@ -1,13 +1,14 @@
 <script setup>
 import TopBar from "./TopBar.vue";
 import Social from "./Social.vue";
-import Banner from "./HeroSection.vue";
-import reel from "../../assets/reel.mp4";
 import BackgroundImage from "./BackgroundImage.vue";
 import Play from "./Play.vue";
-import PlayMobile from "./PlayMobile.vue";
 import VideoMobile from "./VideoMobile.vue";
 import HeroSection from "./HeroSection.vue";
+import { useVideoStore } from "@/store/HandleVideo";
+
+const {status, playPause} = useVideoStore();
+console.log({status, playPause});
 </script>
 <script>
 export default {
@@ -43,6 +44,8 @@ export default {
   },
 };
 </script>
+
+
 <template>
   <VideoMobile v-if="playOnMobile"></VideoMobile>
   <header class="bg-[rgba(0, 0, 0, 0.4)] relative w-full" id="headerMain">
@@ -57,6 +60,8 @@ export default {
     <Social />
   </header>
 </template>
+
+
 <style scoped>
 .bg-header {
   background-image: url("../../assets/bg-header-2.png");

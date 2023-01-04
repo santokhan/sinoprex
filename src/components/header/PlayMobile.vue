@@ -1,15 +1,24 @@
 <script setup>
-import play from "../../assets/play.svg";
+import { useVideoStore } from "@/store/HandleVideo";
+import playSVG from "../../assets/play.svg";
+const {status, playPause} = useVideoStore();
+
+const {playVideoMobile} = defineEmits(['playVideoMobile']);
+
+function handleVideo(){
+  console.log(status);
+  playPause();
+  playVideoMobile();
+}
 </script>
-<script>
-export default { props: ["playVideoMobile"] };
-</script>
+
+
 <template>
-  <!-- top-[36vh] lg:top-[40vh] xl:top-[44vh] -->
-  <button type="button" class="block xl:hidden h-20 w-20 play-btn" @click="playVideoMobile()">
-    <img class="w-full" :src="play" alt="play" />
+  <button type="button" class="block xl:hidden h-20 w-20 play-btn" @click="handleVideo">
+    <img class="w-full" :src="playSVG" alt="play" />
   </button>
 </template>
+
 
 <style scoped>
 @keyframes play {

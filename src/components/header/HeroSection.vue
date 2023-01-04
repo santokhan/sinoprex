@@ -1,15 +1,19 @@
 <script setup>
+import { useVideoStore } from "@/store/HandleVideo";
 import PlayMobile from "./PlayMobile.vue";
+
+const {status, playPause} = useVideoStore();
 </script>
+
 <script>
 export default { props: ["playVideoMobile"] };
 </script>
+
+
 <template>
   <div class="max-w-7xl mx-auto px-4 h-screen flex flex-col xl:text-xl text-gray-200 banner">
-    <div class="max-w-2xl flex flex-col gap-6">
-      <div class="flex">
-        <PlayMobile :playVideoMobile="playVideoMobile"></PlayMobile>
-      </div>
+    <PlayMobile :playVideoMobile="playVideoMobile"></PlayMobile>
+    <div v-if="!status" class="max-w-2xl flex flex-col gap-6 h-full py-8 lg:py-12">
       <div class="text-4xl xl:text-[4.125rem] lg:leading-[4rem] xl:leading-[90px] text-sky-400 hero-text uppercase lg:whitespace-nowrap">
         Drive More <br> Customers Through <br> Digitalization.
       </div>

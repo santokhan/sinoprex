@@ -12,7 +12,6 @@ const position = reactive({value:"flex justify-between items-center xl:h-[140px]
 onMounted(() => {
   // el.value 
 window.onscroll=() => {
-  console.log(window.innerHeight);
   if (window.scrollY > window.innerHeight) {
     position.value = "fixed w-full left-0 top-0 bg-stone-900/75 flex justify-between items-center xl:h-[60px] px-4 lg:px-10 xl:px-[80px] py-3 sm:py-4 z-[900] drop-navbar";
   }else{
