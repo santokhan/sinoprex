@@ -2,7 +2,7 @@
 export default { props: ["text"] };
 </script>
 <template>
-  <div class="font-semibold text-stone-500">
-    {{ text }}
+  <div class="font-normal desc-text">
+    <slot></slot>
   </div>
 </template>

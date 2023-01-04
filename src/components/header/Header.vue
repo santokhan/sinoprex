@@ -1,12 +1,13 @@
 <script setup>
 import TopBar from "./TopBar.vue";
 import Social from "./Social.vue";
-import Banner from "./Banner.vue";
+import Banner from "./HeroSection.vue";
 import reel from "../../assets/reel.mp4";
 import BackgroundImage from "./BackgroundImage.vue";
 import Play from "./Play.vue";
 import PlayMobile from "./PlayMobile.vue";
 import VideoMobile from "./VideoMobile.vue";
+import HeroSection from "./HeroSection.vue";
 </script>
 <script>
 export default {
@@ -40,25 +41,19 @@ export default {
       console.log({ p: this.playOnMobile });
     },
   },
-  components: { PlayMobile, VideoMobile },
 };
 </script>
 <template>
   <VideoMobile v-if="playOnMobile"></VideoMobile>
   <header class="bg-[rgba(0, 0, 0, 0.4)] relative w-full" id="headerMain">
     <BackgroundImage :background="background" />
-    <video
-      class="absolute left-0 top-0 w-full"
-      controls
-      id="backgroundVideo"
-      @play="play"
-    >
+    <video class="absolute left-0 top-0 w-full" controls id="backgroundVideo" @play="play">
       <source src="../../assets/reel.mp4" />
       Error Message
     </video>
     <Play :playVideo="playVideo" :play="play" />
     <TopBar />
-    <Banner :playOnMobile="playOnMobile" :playVideoMobile="playVideoMobile" />
+    <HeroSection :playOnMobile="playOnMobile" :playVideoMobile="playVideoMobile" />
     <Social />
   </header>
 </template>
@@ -70,6 +65,7 @@ export default {
   background-size: contain;
   z-index: -20;
 }
+
 .bg-header::before {
   content: "";
   position: absolute;
@@ -81,13 +77,16 @@ export default {
   mix-blend-mode: screen;
   z-index: -10;
 }
+
 .play {
   animation: play 2s ease-in-out;
 }
+
 @keyframes play {
   0% {
     box-shadow: 0 0 0;
   }
+
   100% {
     box-shadow: 12px 12px 0 solid rgb(red, green, blue);
   }

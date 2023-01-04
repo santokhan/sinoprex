@@ -1,11 +1,7 @@
-<script setup></script>
-<script>
-export default {
-  props: ["text"],
-};
-</script>
+<script setup>defineProps({text: String})</script>
+
 <template>
-  <div class="font-semibold text-stone-700">
-    {{ text }}
+  <div class="desc-text">
+    <slot></slot>
   </div>
 </template>

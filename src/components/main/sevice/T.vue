@@ -1,11 +1,7 @@
-<script setup></script>
-<script>
-export default {
-  props: ["name"],
-};
-</script>
+<script setup>defineProps({name: String})</script>
+
 <template>
   <div class="text-2xl xl:text-3xl font-bold text-gray-700">
-    {{ name }}
+    <slot></slot>
   </div>
 </template>

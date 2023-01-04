@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    --webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+    font-family: 'Rubik', sans-serif;
+}
+
+.drop-navbar {
+    animation-name: drop;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    animation-delay: 0.25s;
+    transform: translateY(-100%);
+}
+
+@keyframes drop {
+    0% {}
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.hero-text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+.desc-text {
+    color: #6a6a6a;
+    line-height: 1.75rem;
+}
+
+::placeholder {
+    color: rgb(168, 162, 158) !important;
+}

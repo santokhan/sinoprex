@@ -5,17 +5,13 @@ import PlayMobile from "./PlayMobile.vue";
 export default { props: ["playVideoMobile"] };
 </script>
 <template>
-  <div
-    class="max-w-7xl mx-auto px-4 py-[80px] md:py-[80px] lg:py-[100px] xl:py-[120px] xl:text-xl text-gray-200 banner"
-  >
-    <div class="max-w-2xl flex flex-col gap-[32px]">
-      <div class="flex justify-center">
+  <div class="max-w-7xl mx-auto px-4 h-screen flex flex-col xl:text-xl text-gray-200 banner">
+    <div class="max-w-2xl flex flex-col gap-6">
+      <div class="flex">
         <PlayMobile :playVideoMobile="playVideoMobile"></PlayMobile>
       </div>
-      <div
-        class="font-[600] text-[3rem] xl:text-[4.5rem] leading-[4rem] xl:leading-[80px] text-sky-400"
-      >
-        Drive More Customers Through Digitalization.
+      <div class="text-4xl xl:text-[4.125rem] lg:leading-[4rem] xl:leading-[90px] text-sky-400 hero-text uppercase lg:whitespace-nowrap">
+        Drive More <br> Customers Through <br> Digitalization.
       </div>
       <div class="max-w-2xl py-2 pr-8 text-sky-100">
         We provide data analysis, cloud service, mobile development, SAAS
@@ -36,11 +32,9 @@ export default { props: ["playVideoMobile"] };
           <span class="px-2">Dadicated support 24/7</span>
         </div>
       </div>
-      <div class="py-3 xl:py-6">
-        <button
-          type="button"
-          class="text-white uppercase tracking-wide xl:tracking-widest bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-6 xl:px-12 py-3 xl:py-5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
+      <div class="py-3 xl:py-4">
+        <button type="button"
+          class="text-white uppercase bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-6 xl:px-10 py-3 xl:py-4 text-center mr-2 mb-2">
           Get Started
         </button>
       </div>

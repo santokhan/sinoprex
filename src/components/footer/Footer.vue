@@ -7,15 +7,11 @@ import FooterNavItem from "./FooterNavItem.vue";
 </script>
 <template>
   <footer class="font-medium text-stone-400 px-4 bg-stone-900">
-    <div
-      class="max-w-7xl mx-auto flex flex-wrap py-12 lg:py-[4rem] xl:py-[5rem]"
-    >
-      <div class="w-full lg:w-2/4 flex flex-col">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between py-12 lg:py-[4rem] xl:py-[5rem]">
+      <div class="w-full lg:w-5/12 flex flex-col">
         <div class="max-w-md">
           <div class="font-bold text-stone-300 uppercase mb-2">Company</div>
-          <div
-            class="flex flex-col lg:flex-row font-medium gap-[32px] uppercase"
-          >
+          <div class="flex flex-col lg:flex-row font-medium gap-[32px] uppercase">
             <FooterNavItem name="About Us" path="about" />
             <FooterNavItem name="Service" path="service" />
             <FooterNavItem name="Reviews" path="review" />
@@ -24,7 +20,7 @@ import FooterNavItem from "./FooterNavItem.vue";
           <Subscribe />
         </div>
       </div>
-      <div class="w-full lg:w-1/4 flex flex-col gap-[2rem]">
+      <div class="w-full lg:w-3/12 flex flex-col gap-[2rem] ml-4">
         <div>
           <div class="font-bold text-stone-300 uppercase mb-2">Headquaters</div>
           <div>RM2207, YINZHOU BUSINESS BUILDING,</div>
@@ -33,25 +29,19 @@ import FooterNavItem from "./FooterNavItem.vue";
         </div>
         <div>
           <div>
-            <a
-              class="uppercase border-b-2 border-transparent hover:border-blue-500"
-              href="tel:(+123) 456 789 101"
-            >
+            <a class="uppercase border-b-2 border-transparent hover:border-blue-500" href="tel:(+123) 456 789 101">
               (+123) 456 789 101
             </a>
           </div>
           <div>
-            <a
-              class="uppercase border-b-2 border-transparent hover:border-blue-500"
-              href="mailto:Hello@SinoPex.com"
-            >
+            <a class="uppercase border-b-2 border-transparent hover:border-blue-500" href="mailto:Hello@SinoPex.com">
               Hello@SinoPex.com
             </a>
           </div>
           <br />
         </div>
       </div>
-      <div class="w-full lg:w-1/4 flex flex-col gap-[3rem]">
+      <div class="w-full lg:w-3/12 flex flex-col gap-[3rem]">
         <div class="flex justify-start lg:justify-end">
           <img class="w-[130px] xl:w-[160px]" :src="logo" alt="logo" />
         </div>
