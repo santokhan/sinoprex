@@ -7,8 +7,7 @@ import VideoMobile from "./VideoMobile.vue";
 import HeroSection from "./HeroSection.vue";
 import { useVideoStore } from "@/store/HandleVideo";
 
-const {status, playPause} = useVideoStore();
-console.log({status, playPause});
+const videoStore = useVideoStore();
 </script>
 <script>
 export default {
@@ -54,7 +53,8 @@ export default {
       <source src="../../assets/reel.mp4" />
       Error Message
     </video>
-    <Play :playVideo="playVideo" :play="play" />
+    <!-- <Play :playVideo="playVideo" :play="play" /> -->
+    <Play :playVideo="playVideo" />
     <TopBar />
     <HeroSection :playOnMobile="playOnMobile" :playVideoMobile="playVideoMobile" />
     <Social />

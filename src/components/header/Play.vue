@@ -1,15 +1,14 @@
 <script setup>
 import { useVideoStore } from "@/store/HandleVideo";
-import play from "../../assets/play.svg";
-
-const {status, playPause} = useVideoStore();
+import playSVG from "../../assets/play.svg";
 
 const {playVideo} = defineProps({playVideo: Function})
 
+const store = useVideoStore();
+
 function handleVideo() {
   playVideo();
-  playPause();
-  console.log(status);
+  store.playPause();
 }
 
 function playPosition() {
@@ -24,11 +23,10 @@ function playPosition() {
 
 <template>
   <!-- top-[36vh] lg:top-[40vh] xl:top-[44vh] -->
-  <div class="hidden xl:block absolute h-20 xl:h-40 w-20 xl:w-40 xl:right-[19.5vw] play-btn" @click="handleVideo()">
-    <img class="w-full" :src="play" alt="play" />
+  <div class="hidden xl:block absolute h-20 xl:h-40 w-20 xl:w-40 xl:right-[19.5vw] play-btn" @click="handleVideo">
+    <img class="w-full" :src="playSVG" alt="play" />
   </div>
 </template>
-
 
 <style scoped>
 @keyframes play {
