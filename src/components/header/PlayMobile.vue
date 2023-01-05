@@ -1,13 +1,12 @@
 <script setup>
 import { useVideoStore } from "@/store/HandleVideo";
 import playSVG from "../../assets/play.svg";
-const {status, playPause} = useVideoStore();
+const store = useVideoStore();
 
-const {playVideoMobile} = defineEmits(['playVideoMobile']);
+const {playVideoMobile} = defineProps({playVideoMobile:Function});
 
 function handleVideo(){
-  console.log(status);
-  playPause();
+  store.playPause();
   playVideoMobile();
 }
 </script>
