@@ -3,11 +3,11 @@ import { useVideoStore } from "@/store/HandleVideo";
 import playSVG from "../../assets/play.svg";
 const store = useVideoStore();
 
-const {playVideoMobile} = defineProps({playVideoMobile:Function});
+const props = defineProps({playVideoMobile:Function});
 
 function handleVideo(){
   store.playPause();
-  playVideoMobile();
+  props.playVideoMobile();
 }
 </script>
 

@@ -6,6 +6,7 @@ body {
     --webkit-font-smoothing: antialiased;
     -moz-font-smoothing: grayscale;
     font-family: 'Rubik', sans-serif;
+    position: relative;
 }
 
 .drop-navbar {
@@ -14,14 +15,12 @@ body {
     animation-fill-mode: forwards;
     animation-duration: 500ms;
     animation-delay: 0.25s;
-    transform: translateY(-100%);
+    transform: translateY(0);
 }
 
 @keyframes drop {
-    0% {}
-
-    80% {
-        transform: translateY(0);
+    0% {
+        transform: translateY(-60px)
     }
 
     100% {

@@ -8,7 +8,8 @@ const store = useVideoStore();
 
 function handleVideo() {
   playVideo();
-  store.playPause();
+  store.showHideHero();
+  console.log(store.heroText);
 }
 
 function playPosition() {

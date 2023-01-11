@@ -9,16 +9,14 @@ import { reactive,ref, onMounted  } from "vue";
 
 const position = reactive({value:"flex justify-between items-center xl:h-[140px] px-4 lg:px-10 xl:px-[80px] py-3 sm:py-4 z-[900]"})
 
-onMounted(() => {
   // el.value 
 window.onscroll=() => {
-  if (window.scrollY > window.innerHeight) {
-    position.value = "fixed w-full left-0 top-0 bg-stone-900/75 flex justify-between items-center xl:h-[60px] px-4 lg:px-10 xl:px-[80px] py-3 sm:py-4 z-[900] drop-navbar";
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    position.value = "fixed w-full left-0 top-0 bg-stone-900/75 flex justify-between items-center h-[60px] px-4 lg:px-10 xl:px-[80px] py-3 sm:py-4 z-[900] drop-navbar";
   }else{
     position.value="flex justify-between items-center xl:h-[140px] px-4 lg:px-10 xl:px-[80px] py-3 sm:py-4 z-[900]"
   }
 }
-});
 </script>
 <script>
 export default {

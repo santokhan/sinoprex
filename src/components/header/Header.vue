@@ -6,8 +6,11 @@ import Play from "./Play.vue";
 import VideoMobile from "./VideoMobile.vue";
 import HeroSection from "./HeroSection.vue";
 import { useVideoStore } from "@/store/HandleVideo";
+import { reactive } from "vue";
 
 const videoStore = useVideoStore();
+
+const state = reactive({play:false, playOnMobile:false, background: true})
 </script>
 <script>
 export default {
